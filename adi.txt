@@ -1,0 +1,9 @@
+find /home/aditya/balle/ -type f -exec wc -l {} \; | awk '{total += $1} END{print total}'
+
+awk '{ if (length($0) > max) max = length($0) } END { print max }' sample.txt
+
+awk 'NF > 0' sample.txt
+
+
+find /home/aditya/balle/ -type f -exec awk '{ if ('NF > 0') } END { wc -l {} }'  \; | awk '{total += $1} END{print total}'
+
